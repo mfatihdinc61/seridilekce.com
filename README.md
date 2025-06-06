@@ -1,7 +1,7 @@
 
 # 📝 Seridilekce.com
 
-**Seri Dilekçe** is a free and user-friendly online platform that helps users in Turkey quickly create official petition letters (`dilekçe`) in PDF format. It streamlines the process of preparing formal requests for submission to government or private institutions. **Tens of thousands** petitions had been prepared via this platform 
+**Seri Dilekçe** is a free and user-friendly online platform that helps users in Turkey quickly create official petition letters (`dilekçe`) in PDF format removing the burden of watching dozens of writing rules to make the petition acceptable. It streamlines the process of preparing formal requests for submission to government or private institutions. **Tens of thousands** petitions have been prepared via this platform since its publication.
 
 
 ## 🚀 Features

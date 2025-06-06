@@ -33,9 +33,7 @@
 3. (Optional) Add any attachments.
 4. Click **Generate** to create the PDF.
 5. Download and print your petition.
-
-## ✅ Date of Publish
-
+6. 
 
 ## ✅ Date of Publish
 

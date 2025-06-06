@@ -1,10 +1,7 @@
-Sure! Here's the updated **Used Languages / Frameworks** section — now more organized and complete — and reflected in the full `README.md`:
 
----
+# 📝 Seridilekce.com
 
-# 🌐 Seridilekce.com
-
-**Seri Dilekçe** is a free and user-friendly online platform that helps users in Turkey quickly create official petition letters (`dilekçe`) in PDF format. It streamlines the process of preparing formal requests for submission to government or private institutions.
+**Seri Dilekçe** is a free and user-friendly online platform that helps users in Turkey quickly create official petition letters (`dilekçe`) in PDF format. It streamlines the process of preparing formal requests for submission to government or private institutions. **Tens of thousands** petitions had been prepared via this platform 
 
 
 ## 🚀 Features
@@ -36,4 +33,16 @@ Sure! Here's the updated **Used Languages / Frameworks** section — now more or
 3. (Optional) Add any attachments.
 4. Click **Generate** to create the PDF.
 5. Download and print your petition.
+
+## ✅ Date of Publish
+
+
+## ✅ Date of Publish
+
+After nearly 2 months of coding from scratch (keep in mind in the version of the website, not a single line from GPT could be used) in December 2022 website is published as seridilekce.com
+
+
+
+
+
 

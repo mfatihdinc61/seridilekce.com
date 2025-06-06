@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FCR3RDW1TQ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-FCR3RDW1TQ');
+  gtag('config', 'AW-11008830595');
+
+</script>
+
+
+
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dilekçe oluştuma süreci ile ilgili yorum bırakın.">
+    <title>Yorum/Öneri</title>
+    
+    <link rel="canonical" href="https://seridilekce.com/yorum" />
+    <link rel="icon" type="image/png" href="seridilekce_icon.png">
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+    <style>
+    
+    
+        body {
+          background-image: url('static/background_for_visitors.avif');
+          background-size: cover;
+          background-position: center;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+          margin: 0;
+          overflow-x: hidden;
+          height: 100vh;
+
+        }
+      
+        form {
+          padding: 20px;
+          background-color: rgba(255, 255, 255, 0.8);
+          background-size: 1200px;
+          border-radius: 8px;
+          height: 800px;
+
+        }
+      
+        label {
+          display: block;
+          margin-top: 10px;
+          font-weight: bold;
+        }
+      
+        input[type="text"],
+        input[type="email"],
+        textarea {
+          width: 100%;
+          padding: 8px;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          box-sizing: border-box;
+          margin-top: 5px;
+          margin-bottom: 10px;
+          resize: vertical;
+        }
+      
+        input[type="file"] {
+          margin-top: 5px;
+          margin-bottom: 10px;
+        }
+      
+        input[type="submit"] {
+          background-color: #394539;
+          color: white;
+          padding: 10px 15px;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+        }
+      
+        input[type="submit"]:hover {
+          background-color: #45a049;
+        }
+      
+        #additionalFields {
+          margin-top: 10px;
+          padding: 10px;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          background-color: #f9f9f9;
+        }
+
+        .radio-container {
+            display: flex;
+            align-items: center;
+            margin: 5px;
+            position: relative;
+            top: -10px;
+        }
+
+        .radio-container label {
+             /*margin-right: 10px;*/
+             margin: 10px;
+        }
+
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    /*height: 1700px;*/
+    overflow: hidden;
+  }
+
+  .success-message {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .success-message img {
+    width: 80px;
+    height: 80px;
+    /*margin-right: 10px;*/
+  }
+
+    @media only screen and (min-width:1150px){
+    form{
+    width: 500px;
+    max-width: 800px;
+    position: relative;
+    top: 50px;
+    }
+    }
+
+
+    @media only screen and (max-width:1150px){
+    form{
+    position: relative;
+    top: 100px;
+    }
+    }
+
+
+    @media only screen and (max-width:800px){
+    form{
+    position: relative;
+    top: 50px;
+    }
+    }
+
+    @media only screen and (max-width:600px){
+        form{
+    position: relative;
+    top: 50px;
+    }
+    }
+
+    @media only screen and (max-width:400px){
+
+        form{
+    position: relative;
+    top: 40px;
+    }
+
+    body{
+    height: fit-content;
+    }
+    }
+
+    @media only screen and (max-width:300px){
+        form{
+    position: relative;
+    top: 100px;
+    }
+    }
+      </style>
+      
+    </head>
+
+
+
+      <body>
+    
+    {%extends "navigationpart.html" %}
+    {%block header%}
+
+
+
+      <form action="/yorum" method="post" enctype="multipart/form-data" id="theForm">
+          
+          
+        <div>
+          <label for="email">E-posta Adresiniz:</label>
+          <input type="email" id="email" name="email">
+        </div>
+        <div>
+          <label for="comment">Yorumunuz:</label>
+          <textarea id="comment" rows="10" placeholder="Yorumunuzu buraya yazabilir, yakaladıysanız hatanın ekran görüntüsünü aşağıdan ekleyebilirsiniz." name="comment" required></textarea>
+        </div>
+        <div>
+          <label for="screenshot">Ekran Görüntüsü:</label>
+          <input type="file" id="screenshot" name="screenshot" accept="image/jpeg, image/png">
+        </div>
+        <div>
+
+          <label style="display: inline-block; vertical-align: middle; padding-top: 10px;">Bağış/Transfer Noktası</label><br>
+          <label style="font-style: italic; padding-bottom: 25px;">Yorumunuz faydalı bulunursa (bir eksikliğe değinen ilk kişiyseniz) adınıza cüzi miktarda bağış yapılacaktır.</label>
+
+          <div class="radio-container">
+          <input style="display: inline-block" type="radio" id="radio1" name="radio" value="1" checked>
+          <label for="radio1">Kızılay</label><br>
+          </div>
+
+
+          <div class="radio-container">
+          <input type="radio" id="radio2" name="radio" value="2" >
+          <label for="radio2">Lösev</label><br>
+         </div>
+
+
+          <div class="radio-container">
+          <input type="radio" id="radio3" name="radio" value="3" >
+          <label for="radio3">Mehmetçik Vakfı</label><br>
+            </div>
+
+
+          <div class="radio-container">
+          <input type="radio" id="radio4" name="radio" value="4" >
+          <label for="radio4">Kendime</label>
+        </div>
+
+        </div>
+
+
+        <div id="additionalFields" style="display: none;">
+
+            <div>
+            <label for="fullname">Ad-Soyad:</label>
+            <input type="text"  id="fullname" name="fullname">
+            </div>
+
+          <div>
+            <label for="iban">IBAN:</label>
+            <input type="text" id="iban" name="iban">
+          </div>
+        </div>
+
+
+
+
+
+        <div style="display: flex; justify-content: center;">
+          <input type="submit" value="Gönder" id= "gonderButton" style="font-size: 15px; position: relative; top:5px">
+        </div>
+      </form>
+
+              <div class="container" id="thetick" style="display:none">
+            <div class="success-message" style="display:flex">
+             <img src="static/approval_tick.png" alt="Approval Tick">
+             <span style="font-style: italic;font-weight: bolder; font-size: large;">Yorumunuz Başarı ile Alındı, Teşekkürler</span>
+            </div>
+        </div>
+
+
+      <script>
+        const radioButtons = document.getElementsByName("radio");
+        const additionalFields = document.getElementById("additionalFields");
+        const theForm = document.getElementById("theForm");
+        const gonderButton = document.getElementById("gonderButton");
+        const theTick = document.getElementById("thetick");
+
+        let b = {{conditioner2}};
+        console.log(b);
+        if (b) {
+        console.log(b);
+        theTick.style.display = 'flex';
+        theForm.style.display = 'none';
+        };
+
+
+      
+        radioButtons.forEach((radio) => {
+          radio.addEventListener("change", () => {
+            if (radio.value === "4") {
+              additionalFields.style.display = "block";
+              theForm.style.height = '900px';
+
+            }
+
+             else {
+              additionalFields.style.display = "none";
+              theForm.style.height = '700px';
+            }
+
+          });
+        });
+
+
+
+      </script>
+
+
+</body>
+{% endblock %}
+
+
+</html>

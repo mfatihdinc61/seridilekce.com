@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <style>
+
+
+
+
+.new-header{
+width: 0;
+height: 0;
+}
+
+
+
+.footer {
+    position: fixed;
+    display: none;
+    bottom: 0;
+    width: 100%;
+    height: 20px;
+    background-color: green;
+    color: white;
+    font-size: small;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+{%- if request.path=="/ornekdilekce"%}
+.footer {
+   width: 100%;
+   background-color: green;
+   color: white;
+   text-align: center;
+   display: grid;
+   grid-template-rows: auto 0 auto;
+   position: relative;
+   top: 10px;
+}
+
+.p1{
+    color: white;
+}
+{% endif %}
+
+
+
+
+
+
+{%- if request.path=="/dilekceyaz"%}
+.footer {
+    display: none;
+}
+{% endif %}
+
+
+
+{%- if request.path=="/yorum"%}
+.footer {
+    display: none;
+}
+
+ul
+{
+            list-style: none;
+            position: absolute;
+            right: 10px;
+            padding-right: 0px;
+        }
+
+{% endif %}
+
+
+
+
+
+ul
+{
+            list-style: none;
+            position: absolute;
+            right: 0;
+            padding-right: 30px;
+        }
+
+
+        li{
+            display: inline-block;
+            margin: 5px;
+        }
+
+        {%- if request.path=="/ornekdilekce"%}
+        li{
+            display: inline-block;
+            margin: 5px;
+            background-color: rgb(135, 201, 29);
+            border-radius: 10px;
+            padding: 5px;
+            color: black
+        }
+        {% endif %}
+
+        li a{
+            text-decoration: none;
+        }
+
+        li a:hover{
+            color:rgb(100, 98, 106)
+        }
+
+        .div-header{
+            height: 150px;
+        }
+
+        {%- if request.path=="/dilekceyaz"%}
+            .div-header {
+            height: 50px;
+            }
+        {% endif %}
+
+        {%- if request.path=="/yorum"%}
+
+
+            .div-header {
+            height: 100px;
+            width: 100vw;
+            
+            display: flex;
+            justify-content: center;
+
+            position: absolute;
+            top:0;
+            
+            left: 50%;
+            transform: translateX(-50%);
+            
+            margin: 0px;
+            padding: 0px;
+            
+            }
+
+
+            .footer{
+            display: none;
+            }
+            
+            
+            
+            form{
+                position: absolute;
+                top: 100px;
+            }
+            
+            
+        {% endif %}
+
+
+                {%- if request.path=="/ornekdilekce"%}
+            .div-header {
+            height: 80px;
+            }
+        {% endif %}
+
+
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+
+
+@media only screen and (max-width: 1100px){
+.footer{
+display: none;
+}
+
+
+        {%- if request.path=="/" %}
+
+        @media only screen and (max-width: 600px){
+        .footer{
+        display: none;
+        }
+
+        .div-header{
+        display: none;
+        }
+
+        .new-header{
+        width: 100px;
+        height: 100px;
+        }
+
+        {% endif %}
+        }
+
+
+
+        @media only screen and (max-width: 500px){
+        li{
+        font-size: 11px;
+        }
+        .div-header{
+        text-align: center;
+        }
+
+
+
+        @media only screen and (max-width: 350px){
+
+        li{
+        font-size: 9px;
+        color: blue;
+        }
+
+        .div-header{
+        text-align: center;
+        }
+
+
+
+        }
+
+
+
+    </style>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <div class="div-header">
+    <ul>
+        <li>
+            <a href="/">
+                Ana Sayfa
+            </a>
+        </li>
+
+<!--        <li>-->
+<!--            <a href="/ornekdilekce">-->
+<!--                Örnek Dilekçe-->
+<!--            </a>-->
+<!--        </li>-->
+
+        <li>
+            <a href="dilekceyaz">
+                Dilekçe Yaz
+            </a>
+        </li>
+
+<!--                <li>-->
+<!--            <a href="yorum">-->
+<!--                Yorum-->
+<!--            </a>-->
+<!--        </li>-->
+
+
+    </ul>
+</div>
+
+
+
+  <div class="new-header"></div>
+
+
+      {% block header %}
+      {% endblock %}
+
+      <div class="footer" style="diplay: none">
+        <p class="p1" style="margin: 2px;">Copyright &copy; 2022 All Rights Reserved by Dincfeller Technologies</p>
+      </div>
+
+      {% block footer %}
+      {% endblock %}
+
+
+
+
+</body>
+</html>
+
+
